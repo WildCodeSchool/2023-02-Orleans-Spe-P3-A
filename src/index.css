@@ -1,0 +1,16 @@
+/* you can set vars here if needed */
+:root {
+  --color-primary: #f00;
+  --color-secondary: #0f0;
+  --color-tertiary: #00f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #282c34;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
