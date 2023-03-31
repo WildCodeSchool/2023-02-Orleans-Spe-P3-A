@@ -1,18 +1,21 @@
 import { useState, useEffect } from 'react';
+import CardChampions from './CardChampions';
 
 function List() {
   const [champions, setChampions] = useState([]);
 
   useEffect(() => {
     // Récupération de la liste de tous les champions depuis l'API Data Dragon
-    fetch('http://ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json')
+    fetch('https://ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json')
       .then(response => response.json())
       .then(data => {
-        // Stockage de la liste des noms de champions dont le nom commence par "A"
-        const filteredChampions = Object.values(data.data)
-          .filter(champion => champion.name.startsWith('A'))
-          .map(champion => champion.name);
-        setChampions(filteredChampions);
+        const championsList = Object.values(data.data).map(champion => ({
+          id: champion.id,
+          name: champion.name,
+          image: `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`,
+          tags: champion.tags,
+        }));
+        setChampions(championsList);
       })
       .catch(error => {
         console.error('Error fetching champion data:', error);
@@ -20,14 +23,11 @@ function List() {
   }, []);
 
   return (
-    <main>
-      {champions.map(championName => (
-        <div key={championName} className='champion-card'>
-          <h2>{championName}</h2>
-          <img src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${championName}_0.jpg`} alt={championName} />
-        </div>
+    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+      {champions.map(champion => (
+        <CardChampions key={champion.id} champion={champion} />
       ))}
-    </main>
+    </div>
   );
 }
 
