@@ -1,8 +1,7 @@
-import { Box, Image, Badge, Text, Center, Button } from '@chakra-ui/react';
-import { Link } from '@chakra-ui/react';
+import { Box, Image, Badge, Text, Center, Button, Link } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-function CardChampions({ champion }) {
+function ChampionCard({ champion }) {
   const { name, image, tags } = champion;
 
   return (
@@ -48,7 +47,7 @@ function CardChampions({ champion }) {
   );
 }
 
-CardChampions.propTypes = {
+ChampionCard.propTypes = {
   champion: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -57,4 +56,4 @@ CardChampions.propTypes = {
   }).isRequired,
 };
 
-export default CardChampions;
+export default ChampionCard;
