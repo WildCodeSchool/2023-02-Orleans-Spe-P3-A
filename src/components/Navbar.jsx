@@ -38,7 +38,10 @@ const Navbar = () => {
         <IconButton
           aria-label='Menu'
           icon={<HamburgerIcon />}
-          variant='ghost'
+          variant = 'ghost'
+          _hover={{
+            backgroundColor: 'gray.400'
+          }}
           color='white'
           onClick={onOpen}
           display={['block', 'none']}
