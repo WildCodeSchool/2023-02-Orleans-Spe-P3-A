@@ -1,4 +1,4 @@
-import { Box, Image, Badge, Text, Center, Button, Link } from '@chakra-ui/react';
+import { Box, Image, Badge, Text, Center, Button, Link, Flex } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 function ChampionCard({ champion }) {
@@ -28,16 +28,16 @@ function ChampionCard({ champion }) {
           {name}
         </Text>
 
-        <Box d='flex' alignItems='baseline' justifyContent='center'>
+        <Flex align='baseline' justify='center'>
           {tags.map(tag => (
             <Badge key={tag} bg='#d0a85c' borderRadius='full' px='2' m='1'>
               {tag}
             </Badge>
           ))}
-        </Box>
+        </Flex>
         <Box justifyContent='center' p='0'>
           <Link to='/' style={{ textDecoration: 'none' }}>
-            <Button variant='solid' height='30%' w='100%'>
+            <Button variant='solid' h='30%' w='100%'>
               {'Sélectionnez ce champion'}
             </Button>
           </Link>
