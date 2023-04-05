@@ -1,7 +1,11 @@
-import List from './components/ListChampions';
+import Home from './pages/Home';
 
 function App() {
-  return <List />;
+  return (
+    <div>
+      <Home />
+    </div>
+  );
 }
 
 export default App;
