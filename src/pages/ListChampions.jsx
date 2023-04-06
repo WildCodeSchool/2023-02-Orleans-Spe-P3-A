@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
 import ChampionCard from '../components/ChampionCard';
-import { Box, Heading } from '@chakra-ui/react';
-import Background from '../assets/images/BackgroundB2g.jpg';
-import { Skeleton } from '@chakra-ui/react';
+import { Box, Heading, Skeleton } from '@chakra-ui/react';
+import background from '../assets/images/BackgroundB2g.jpg';
 
 function List() {
   const [champions, setChampions] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch('//ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json')
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+
+    fetch('//ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json', { signal })
       .then(response => response.json())
       .then(data => {
         const championsList = Object.values(data.data).map(champion => ({
@@ -24,10 +26,14 @@ function List() {
       .catch(error => {
         console.error('Error fetching champion data:', error);
       });
+
+    return function cleanup() {
+      abortController.abort();
+    };
   }, []);
 
   return (
-    <Box backgroundImage={`url(${Background})`} backgroundSize='cover' minHeight='100vh' py='4'>
+    <Box backgroundImage={background} backgroundSize='cover' minHeight='100vh' py='4'>
       <Box spacing='4' marginTop='15px'>
         <Heading as='h1' size='2xl' textAlign='center' color='white'>
           {'Listes des champions'}
@@ -37,13 +43,13 @@ function List() {
             {'Tank'}
           </Heading>
           <Heading as='h2' size='md' mr='4'>
-            {' Assassin'}
+            {'Assassin'}
           </Heading>
           <Heading as='h2' size='md' mr='4'>
             {'Mage'}
           </Heading>
           <Heading as='h2' size='md' mr='4'>
-            {' Marksman'}
+            {'Marksman'}
           </Heading>
         </Box>
         <Box display='flex' justifyContent='center' flexWrap='wrap'>
