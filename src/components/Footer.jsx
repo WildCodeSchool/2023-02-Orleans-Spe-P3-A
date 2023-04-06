@@ -5,13 +5,19 @@ const customTheme = extendTheme({});
 
 const Footer = () => {
   return (
-    <div className='Footer'>
+    <div>
       <Box as='footer' bg='black' w='100%' h={{ base: '480px', md: '250px' }} direction={['column', 'column', 'row', 'row']}>
         <Stack direction={['column-reverse', 'column-reverse', 'row-reverse', 'row-reverse']}>
           {/*Api data source*/}
-          <Box w={{ base: '100%', md: '50%' }} pl={{ md: '10px' }} align='center' h={{ base: '150px', md: '250px' }}>
-            <Flex direction='column' justify={['center', 'center', 'space-around']} h={{ base: '150px', md: '250px' }} pt={{ md: '17px' }}>
-              <Box>
+          <Box
+            w={{ base: '100%', md: '50%' }}
+            pl={{ md: '10px' }}
+            mt={{ base: '20px', md: 'initial' }}
+            align='center'
+            h={{ base: '170px', md: '250px' }}
+          >
+            <Flex direction='column' justify={['center', 'center', 'space-around']} h={{ base: '160px', md: '250px' }} pt={{ md: '17px' }}>
+              <Flex h='200px' direction='column' justify={{ base: 'space-around', md: 'initial' }}>
                 <Flex justify='flex-start' ml={{ base: '35px', md: '30px' }} fontSize='1.5rem' color='#D0A85C'>
                   Api League of Legends
                 </Flex>
@@ -20,7 +26,7 @@ const Footer = () => {
                     All the content of B2G'S comes from the API of League of Legends Database.
                   </Text>
                 </Flex>
-              </Box>
+              </Flex>
               <Flex justify='flex-start'>
                 <Flex
                   justify='space-between'
@@ -35,7 +41,12 @@ const Footer = () => {
                   <Text fontSize='1.3rem' fontWeight='bold'>
                     Data Dragon
                   </Text>
-                  <Text fontSize={{ base: '1rem', md: '1..1rem' }} alignSelf={{ base: 'flex-start', md: 'flex-end' }} color='#D0A85C'>
+                  <Text
+                    fontSize={{ base: '1rem', md: '1..1rem' }}
+                    alignSelf={{ base: 'flex-start', md: 'flex-end' }}
+                    marginBottom={{ base: '20px' }}
+                    color='#D0A85C'
+                  >
                     Mentions légales
                   </Text>
                 </Flex>
@@ -55,15 +66,27 @@ const Footer = () => {
           ></Flex>
 
           {/*Box authors-api */}
-
-          <Flex direction='column' w={{ base: '100%', md: '50%' }} gap='20px' height={{ base: '310px', md: '250px' }} color='white' p={30}>
+          <Flex
+            direction='column'
+            w={{ base: '100%', md: '50%' }}
+            gap='20px'
+            height={{ base: '290px', md: '250px' }}
+            color='white'
+            p={{ base: '10px', md: '30px' }}
+          >
             {/*Box Authors title */}
-            <Flex justify={['center', 'center', 'flex-start']} w='100%' color='grey' fontSize='2rem' pl={{ base: '0', md: '24px' }}>
+            <Flex
+              justify={['center', 'center', 'flex-start']}
+              w='100%'
+              color='grey'
+              fontSize='2rem'
+              pl={{ base: '0', md: '24px' }}
+              mt={{ base: '10px', md: 'initial' }}
+            >
               Authors
             </Flex>
 
             {/*authors name and photo*/}
-
             <Wrap w={{ base: '100%' }} h={{ base: '300px' }} justify='space-between'>
               {/*bloc name photo */}
               <Flex w={{ base: '47%', md: '155px' }} justify='center' color='white'>
@@ -111,11 +134,11 @@ const Footer = () => {
               <Flex w={{ base: '47%', md: '155px' }} justify='center' color='white'>
                 <Flex justify='space-between' align='center' direction={['column', 'column', 'row']} gap='5px'>
                   {/*authors photo*/}
-                  <Center className='photo-profile' w='50%'>
+                  <Center w='50%'>
                     <Image w='100%' borderRadius='full' boxSize='40px' src='./src/assets/smile.svg' alt='ric photo' />
                   </Center>
                   {/*authors name*/}
-                  <Center className='name' color='grey' fontSize={{ base: '1.4rem', md: '1.2rem' }} w={{ base: '77px', md: 'initial' }}>
+                  <Center color='grey' fontSize={{ base: '1.4rem', md: '1.2rem' }} w={{ base: '77px', md: 'initial' }}>
                     Thyphen
                   </Center>
                 </Flex>
