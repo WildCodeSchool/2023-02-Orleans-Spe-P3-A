@@ -1,19 +1,32 @@
 import { useState, useEffect } from 'react';
-import { Input, InputGroup, Container, InputRightElement, Image, Box, Text, Center } from '@chakra-ui/react';
+import { Input, InputGroup, Container, InputRightElement, Image, Box, Text } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 
 function SearchBar() {
   const [champions, setChampions] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const abortController = new AbortController();
 
   useEffect(() => {
     const fetchChampions = async () => {
-      const response = await fetch('//ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json');
-      const data = await response.json();
-      setChampions(Object.values(data.data));
+      abortController.abort();
+      const newAbortController = new AbortController();
+      try {
+        const response = await fetch('//ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json', {
+          signal: newAbortController.signal,
+        });
+        const data = await response.json();
+        setChampions(Object.values(data.data));
+      } catch (error) {
+        console.error(error);
+      }
     };
 
     fetchChampions();
+
+    return () => {
+      abortController.abort();
+    };
   }, []);
 
   const handleInputChange = event => {
@@ -34,6 +47,7 @@ function SearchBar() {
           size='lg'
           placeholder='Choisis un champion'
           backgroundColor='#ffffff21'
+          value={searchTerm}
           onChange={handleInputChange}
         />
       </InputGroup>

@@ -1,4 +1,4 @@
-import { Box, Flex, Heading } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import SearchBar from '../components/SearchBar';
 import imageSrc from '../../src/assets/images/BackgroundImg.png';
 
@@ -7,8 +7,11 @@ function Home() {
     <Box backgroundImage={imageSrc} backgroundSize='cover' backgroundPosition='center' h='100vh'>
       <Flex justifyContent='center'>
         <Box>
-          <Heading as='h1' size='4xl' color='white' textTransform='uppercase' mb='150px' mt='200px'>
-            B2G.<span style={{ color: 'rgb(208, 168, 92)' }}>JS</span>
+          <Heading as='h1' size='4xl' color='white' textTransform='uppercase' mb='150px' mt='150px'>
+            {'B2G.'}
+            <Text as='span' color='#d0a85c'>
+              {'JS'}
+            </Text>
           </Heading>
         </Box>
       </Flex>
