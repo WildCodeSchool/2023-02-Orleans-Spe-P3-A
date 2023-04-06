@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import List from './components/ListChampions';
+import List from './pages/ListChampions';
 import Navbar from './components/Navbar';
 
 function App() {

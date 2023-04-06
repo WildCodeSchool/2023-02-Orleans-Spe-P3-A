@@ -14,9 +14,10 @@ function ChampionCard({ champion }) {
       m='1rem'
       mb='1rem'
       _hover={{
-        backgroundColor: 'blue.100',
+        backgroundColor: 'blue.800',
         boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)',
         transition: 'box-shadow 0.3s ease-in-out',
+        transform: 'scale(1.02)',
       }}
     >
       <Center h='80%'>
@@ -24,20 +25,20 @@ function ChampionCard({ champion }) {
       </Center>
 
       <Box p='2' justifyContent='center'>
-        <Text mt='0' fontWeight='bold' fontSize='l' lineHeight='tight' color='blue.500'>
+        <Text mt='0' fontWeight='bold' fontSize='l' lineHeight='tight' color='white'>
           {name}
         </Text>
 
         <Flex align='baseline' justify='center'>
           {tags.map(tag => (
-            <Badge key={tag} bg='#d0a85c' borderRadius='full' px='2' m='1'>
+            <Badge key={tag} bg='#d0a85c' borderRadius='lg' px='2' m='1'>
               {tag}
             </Badge>
           ))}
         </Flex>
         <Box justifyContent='center' p='0'>
           <Link to='/' style={{ textDecoration: 'none' }}>
-            <Button variant='solid' h='30%' w='100%'>
+            <Button variant='solid' h='30%' w='100%' margin='auto'>
               {'Sélectionnez ce champion'}
             </Button>
           </Link>
@@ -54,6 +55,7 @@ ChampionCard.propTypes = {
     image: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
+  isLoading: PropTypes.bool,
 };
 
 export default ChampionCard;
