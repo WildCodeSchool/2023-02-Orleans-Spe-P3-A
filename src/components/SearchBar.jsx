@@ -5,9 +5,9 @@ import { SearchIcon } from '@chakra-ui/icons';
 function SearchBar() {
   const [champions, setChampions] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const abortController = new AbortController();
 
   useEffect(() => {
+    const abortController = new AbortController();
     const fetchChampions = async () => {
       abortController.abort();
       const newAbortController = new AbortController();
