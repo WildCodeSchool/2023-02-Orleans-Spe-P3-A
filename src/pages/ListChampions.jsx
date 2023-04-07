@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ChampionCard from '../components/ChampionCard';
 import { Box, Heading, Skeleton } from '@chakra-ui/react';
-import background from '../assets/images/BackgroundB2g.jpg';
+import background from '../assets/images/backgroundB2g.jpg';
 
 function List() {
   const [champions, setChampions] = useState([]);
