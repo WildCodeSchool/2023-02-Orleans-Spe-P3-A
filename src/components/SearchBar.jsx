@@ -9,11 +9,9 @@ function SearchBar() {
   useEffect(() => {
     const abortController = new AbortController();
     const fetchChampions = async () => {
-      abortController.abort();
-      const newAbortController = new AbortController();
       try {
         const response = await fetch('//ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json', {
-          signal: newAbortController.signal,
+          signal: abortController.signal,
         });
         const data = await response.json();
         setChampions(Object.values(data.data));
