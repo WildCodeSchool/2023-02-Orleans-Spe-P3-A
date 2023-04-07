@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import SearchBar from '../components/SearchBar';
-import imageSrc from '../../src/assets/images/BackgroundImg.png';
+import imageSrc from '../../src/assets/images/background-image.png';
 
 function Home() {
   return (
