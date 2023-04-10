@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
+import List from './pages/ListChampions';
 import Home from './pages/Home';
-import List from './components/ListChampions';
 import Navbar from './components/Navbar';
 
 function App() {
