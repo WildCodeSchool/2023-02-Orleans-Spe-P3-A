@@ -22,7 +22,7 @@ const guys = [
 const Footer = () => {
   return (
     <div>
-      <Box as='footer' bg='black' w='100%' h={{ base: '480px', md: '250px' }} direction={['column', 'column', 'row']}>
+      <Box as='footer' bg='black' w='100%' h={{ base: '480px', md: '250px' }}>
         <Stack direction={['column', 'column', 'row', 'row']}>
           {/*Trait de sépration */}
           <Flex
@@ -100,29 +100,27 @@ const Footer = () => {
                 </Text>
               </Flex>
 
-              <Flex justify='flex-start'>
-                <Flex
-                  justify='space-between'
-                  align={['flex-start']}
-                  direction={['column', 'column', 'row']}
+              <Flex
+                justify='space-between'
+                align={['flex-start']}
+                direction={['column', 'column', 'row']}
+                color='#D0A85C'
+                w='90%'
+                ml={{ base: '35px', md: '30px' }}
+                pr={{ base: '20px' }}
+                h={{ base: '100px', md: '50px' }}
+              >
+                <Text fontSize='1.3rem' fontWeight='bold'>
+                  {'Data Dragon'}
+                </Text>
+                <Text
+                  fontSize={{ base: '1rem', md: '1..1rem' }}
+                  alignSelf={{ base: 'flex-start', md: 'flex-end' }}
+                  marginBottom={{ base: '20px' }}
                   color='#D0A85C'
-                  w='90%'
-                  ml={{ base: '35px', md: '30px' }}
-                  pr={{ base: '20px' }}
-                  h={{ base: '100px', md: '50px' }}
                 >
-                  <Text fontSize='1.3rem' fontWeight='bold'>
-                    {'Data Dragon'}
-                  </Text>
-                  <Text
-                    fontSize={{ base: '1rem', md: '1..1rem' }}
-                    alignSelf={{ base: 'flex-start', md: 'flex-end' }}
-                    marginBottom={{ base: '20px' }}
-                    color='#D0A85C'
-                  >
-                    {'Legal notice'}
-                  </Text>
-                </Flex>
+                  {'Legal notice'}
+                </Text>
               </Flex>
             </Flex>
           </Box>
