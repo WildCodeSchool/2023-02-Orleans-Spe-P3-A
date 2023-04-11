@@ -1,11 +1,17 @@
-import Footer from './components/Footer';
 import List from './components/ListChampions';
-import LegalNotice from './pages/LegalNotice';
+import { Routes, Route } from 'react-router-dom';
+import List from './components/ListChampions';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
-      <List />
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<div>{'Hello World!'}</div>} />
+        <Route path='/champions' element={<List />} />
+      </Routes>
       <Footer />
     </>
   );
