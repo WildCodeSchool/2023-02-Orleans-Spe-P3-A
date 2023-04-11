@@ -53,7 +53,7 @@ const Footer = () => {
               pl={{ base: '0', md: '24px' }}
               mt={{ base: '10px', md: 'initial' }}
             >
-              <Text>Authors</Text>
+              <Text>{'Authors'}</Text>
             </Flex>
 
             {/*authors name and photo*/}
@@ -96,7 +96,7 @@ const Footer = () => {
                   {'API League of Legends'}
                 </Text>
                 <Text fontSize='0.5em' color='grey' ml={{ base: '35px', md: '30px' }} textAlign='start'>
-                  All the content of B2G'S comes from the API of League of Legends Database.
+                  {"All the content of B2G'S comes from the API of League of Legends Database."}
                 </Text>
               </Flex>
 
@@ -112,7 +112,7 @@ const Footer = () => {
                   h={{ base: '100px', md: '50px' }}
                 >
                   <Text fontSize='1.3rem' fontWeight='bold'>
-                    Data Dragon
+                    {'Data Dragon'}
                   </Text>
                   <Text
                     fontSize={{ base: '1rem', md: '1..1rem' }}
@@ -120,7 +120,7 @@ const Footer = () => {
                     marginBottom={{ base: '20px' }}
                     color='#D0A85C'
                   >
-                    Legal notice
+                    {'Legal notice'}
                   </Text>
                 </Flex>
               </Flex>
