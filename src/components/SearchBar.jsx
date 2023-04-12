@@ -11,7 +11,7 @@ function SearchBar() {
     const abortController = new AbortController();
     const fetchChampions = async () => {
       try {
-        const response = await fetch('//ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json', {
+        const response = await fetch('//ddragon.leagueoflegends.com/cdn/13.6.1/data/fr_FR/champion.json', {
           signal: abortController.signal,
         });
         const data = await response.json();
