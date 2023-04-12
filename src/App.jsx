@@ -1,4 +1,3 @@
-import List from './components/ListChampions';
 import { Routes, Route } from 'react-router-dom';
 import List from './components/ListChampions';
 import Navbar from './components/Navbar';
