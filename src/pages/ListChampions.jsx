@@ -5,10 +5,10 @@ import background from '../assets/images/background-image.png';
 
 const filterButtons = [
   { label: 'Tous les champions', value: '' },
-  { label: 'Tank', value: 'Tank' },
-  { label: 'Assassin', value: 'Assassin' },
-  { label: 'Mage', value: 'Mage' },
-  { label: 'Marksman', value: 'Marksman' },
+  { label: 'Tanks', value: 'Tank' },
+  { label: 'Assassins', value: 'Assassin' },
+  { label: 'Mages', value: 'Mage' },
+  { label: 'Tireurs', value: 'Marksman' },
 ];
 
 function List() {
