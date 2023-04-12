@@ -27,7 +27,6 @@ function SearchBar() {
       abortController.abort();
     };
   }, []);
-  console.log(champions);
 
   const handleInputChange = event => {
     setSearchTerm(event.target.value.toLowerCase());
