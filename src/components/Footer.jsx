@@ -41,7 +41,7 @@ const Footer = () => {
             pl={{ base: '0', md: '24px' }}
             mt={{ base: '10px', md: 'initial' }}
           >
-            <Text>{'Authors'}</Text>
+            <Text>{'Auteurs'}</Text>
           </Flex>
 
           {/*authors name and photo*/}
@@ -93,7 +93,7 @@ const Footer = () => {
                 {'API League of Legends'}
               </Text>
               <Text fontSize='0.5em' color='grey' ml={{ base: '35px', md: '30px' }} textAlign='start'>
-                {"All the content of B2G'S comes from the API of League of Legends Database."}
+                {"Tout le contenu de B2G provient de l'API de la base de données de League of Legends."}
               </Text>
             </Flex>
 
@@ -116,7 +116,7 @@ const Footer = () => {
                 marginBottom={{ base: '20px' }}
                 color='#D0A85C'
               >
-                {'Legal notice'}
+                {'Mentions légales'}
               </Text>
             </Flex>
           </Flex>
