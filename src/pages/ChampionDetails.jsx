@@ -32,7 +32,7 @@ function ChampionDetails() {
       <Image
         src={`//ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg`}
         objectFit='cover'
-        h='100vh'
+        h='calc(100vh - 58px)'
         w='100%'
         align='center'
       />
