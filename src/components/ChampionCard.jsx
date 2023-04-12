@@ -1,5 +1,6 @@
-import { Box, Image, Badge, Text, Center, Button, Link, Flex } from '@chakra-ui/react';
+import { Box, Image, Badge, Text, Center, Button, Flex } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function ChampionCard({ champion }) {
   const { name, image, tags } = champion;
@@ -37,7 +38,7 @@ function ChampionCard({ champion }) {
           ))}
         </Flex>
         <Box justifyContent='center' p='0'>
-          <Link to='/' style={{ textDecoration: 'none' }}>
+          <Link to={`/champion/${champion.id}`}>
             <Button variant='solid' h='30%' w='100%' margin='auto'>
               {'Sélectionnez ce champion'}
             </Button>
