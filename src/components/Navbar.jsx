@@ -16,21 +16,31 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const hoverStyle = {
+    _hover: {
+      backgroundColor: 'gray.500',
+      transition: 'background-color 0.3s ease',
+    },
+  };
+
+  const noDecorationStyle = {
+    textDecoration: 'none',
+  };
 
   return (
     <Box bg='gray.800'>
       <Flex alignItems='center' justifyContent='space-between' py='3'>
-        <Box fontWeight='bold' color='white' ml='4'>
+        <Box fontWeight='bold' color='white' ml='4' sx={{ ...hoverStyle }}>
           <img src={logo} alt='Logo' width='150px' />
         </Box>
         <Box display={['none', 'block']} color='white' fontSize='20px' mr='4'>
-          <ChakraLink as={Link} to='/' mr='4'>
+          <ChakraLink as={Link} to='/' mr='4' sx={{ ...hoverStyle, ...noDecorationStyle }}>
             {'Accueil'}
           </ChakraLink>
-          <ChakraLink as={Link} to='/champions' mr='4'>
+          <ChakraLink as={Link} to='/champions' mr='4' sx={{ ...hoverStyle, ...noDecorationStyle }}>
             {'Champions'}
           </ChakraLink>
-          <ChakraLink as={Link} to='/postes'>
+          <ChakraLink as={Link} to='/postes' sx={{ ...hoverStyle, ...noDecorationStyle }}>
             {'Postes'}
           </ChakraLink>
         </Box>
