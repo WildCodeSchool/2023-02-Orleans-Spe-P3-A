@@ -21,7 +21,7 @@ function List() {
     const abortController = new AbortController();
     const signal = abortController.signal;
 
-    fetch('//ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json', { signal })
+    fetch('//ddragon.leagueoflegends.com/cdn/13.6.1/data/fr_FR/champion.json', { signal })
       .then(response => response.json())
       .then(data => {
         const championsList = Object.values(data.data).map(champion => ({
