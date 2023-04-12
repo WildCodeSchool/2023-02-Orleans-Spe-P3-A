@@ -53,8 +53,8 @@ function SearchBar() {
       {searchTerm && (
         <Box mt='20px' p='10px' bg='blue.800 ' borderRadius='md' w='100%' maxH='300px' overflowY='scroll' spacing='0px'>
           {filteredChampions.map(champion => (
-            <Link to={`/champion/${champion.id}`}>
-              <Flex key={champion.id} alignItems='center' my='10px' gap='30px' ms='10px'>
+            <Link key={champion.id} to={`/champion/${champion.id}`}>
+              <Flex alignItems='center' my='10px' gap='30px' ms='10px'>
                 <Image
                   src={`//ddragon.leagueoflegends.com/cdn/13.7.1/img/champion/${champion.id}.png`}
                   objectFit='contain'
