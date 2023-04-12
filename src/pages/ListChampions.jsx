@@ -3,6 +3,14 @@ import ChampionCard from '../components/ChampionCard';
 import { Box, Heading, Skeleton, Button, Select } from '@chakra-ui/react';
 import background from '../assets/images/background-image.png';
 
+const filterButtons = [
+  { label: 'Tous les champions', value: '' },
+  { label: 'Tank', value: 'Tank' },
+  { label: 'Assassin', value: 'Assassin' },
+  { label: 'Mage', value: 'Mage' },
+  { label: 'Marksman', value: 'Marksman' },
+];
+
 function List() {
   const [champions, setChampions] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -62,30 +70,27 @@ function List() {
               borderColor='blue.800'
               color='white'
             >
-              <option value=''>{'Tous les champions'}</option>
-              <option value='Tank'>{'Tank'}</option>
-              <option value='Assassin'>{'Assassin'}</option>
-              <option value='Mage'>{'Mage'}</option>
-              <option value='Marksman'>{'Marksman'}</option>
+              {filterButtons.map(button => (
+                <option key={button.value} value={button.value}>
+                  {button.label}
+                </option>
+              ))}
             </Select>
           </Box>
         ) : (
           <Box display='flex' justifyContent='center' color='black' marginTop={50} marginLeft='4.3%' mb={5}>
-            <Button size='md' mr='4' isActive={filter === ''} onClick={() => setFilter('')} variant='variantButton'>
-              {'Tous les champions'}
-            </Button>
-            <Button size='md' mr='4' isActive={filter === 'Tank'} onClick={() => setFilter('Tank')} variant='variantButton'>
-              {'Tank'}
-            </Button>
-            <Button size='md' mr='4' isActive={filter === 'Assassin'} onClick={() => setFilter('Assassin')} variant='variantButton'>
-              {'Assassin'}
-            </Button>
-            <Button size='md' mr='4' isActive={filter === 'Mage'} onClick={() => setFilter('Mage')} variant='variantButton'>
-              {'Mage'}
-            </Button>
-            <Button size='md' mr='4' isActive={filter === 'Marksman'} onClick={() => setFilter('Marksman')} variant='variantButton'>
-              {'Marksman'}
-            </Button>
+            {filterButtons.map((button, index) => (
+              <Button
+                key={index}
+                size='md'
+                mr='4'
+                isActive={filter === button.value}
+                onClick={() => setFilter(button.value)}
+                variant='variantButton'
+              >
+                {button.label}
+              </Button>
+            ))}
           </Box>
         )}
         <Box display='flex' justifyContent='center' flexWrap='wrap'>
