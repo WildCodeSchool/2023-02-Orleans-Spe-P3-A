@@ -51,7 +51,7 @@ function SearchBar() {
         />
       </InputGroup>
       {searchTerm && (
-        <Box mt='20px' p='10px' bg='blue.800 ' borderRadius='md' w='100%' maxH='300px' overflowY='scroll' spacing='0px'>
+        <Box p='10px' bg='blue.800 ' borderRadius='md' w='100%' maxH='300px' overflowY='scroll' spacing='0px'>
           {filteredChampions.map(champion => (
             <Link to={`/champion/${champion.id}`}>
               <Flex key={champion.id} alignItems='center' my='10px' gap='30px' ms='10px'>
