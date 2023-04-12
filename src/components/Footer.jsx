@@ -23,17 +23,6 @@ const Footer = () => {
   return (
     <Box as='footer' bg='black' w='100%' h={{ base: '480px', md: '250px' }}>
       <Stack direction={['column', 'column', 'row', 'row']}>
-        {/*Trait de sépration */}
-        <Flex
-          height={{ base: '1px', md: '200px' }}
-          w={{ base: '200px', md: '1px' }}
-          border='grey'
-          opacity='0.5'
-          bg='grey'
-          my='auto'
-          alignSelf='center'
-        />
-
         {/*Box authors-api */}
         <Flex
           direction='column'
@@ -80,7 +69,16 @@ const Footer = () => {
             ))}
           </Wrap>
         </Flex>
-
+        {/*Trait de sépration */}
+        <Flex
+          height={{ base: '1px', md: '200px' }}
+          w={{ base: '200px', md: '1px' }}
+          border='grey'
+          opacity='0.5'
+          bg='grey'
+          my='auto'
+          alignSelf='center'
+        />
         {/*Api data source*/}
         <Box
           w={{ base: '100%', md: '50%' }}
