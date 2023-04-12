@@ -48,7 +48,7 @@ const Footer = () => {
           <Wrap w={{ base: '100%' }} h={{ base: '300px' }} justify='space-between'>
             {/*bloc name photo */}
             {guys.map(guy => (
-              <Flex w={{ base: '47%', md: '155px' }} justify='center'>
+              <Flex key={guy.name} w={{ base: '47%', md: '155px' }} justify='center'>
                 <Flex
                   justify='space-between'
                   align='center'
