@@ -37,7 +37,7 @@ function List() {
   const filteredChampions = filter ? champions.filter(champion => champion.tags.includes(filter)) : champions;
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 480);
+    setIsMobile(window.innerWidth <= 666);
   };
 
   useEffect(() => {
@@ -70,28 +70,14 @@ function List() {
             </Select>
           </Box>
         ) : (
-          <Box display='flex' justifyContent='flex-start' color='black' marginTop={50} marginLeft='4.3%' mb={5}>
+          <Box display='flex' justifyContent='center' color='black' marginTop={50} marginLeft='4.3%' mb={5}>
             <Button size='md' mr='4' isActive={filter === ''} onClick={() => setFilter('')} variant='variantButton'>
               {'Tous les champions'}
             </Button>
             <Button size='md' mr='4' isActive={filter === 'Tank'} onClick={() => setFilter('Tank')} variant='variantButton'>
               {'Tank'}
             </Button>
-            <Button
-              size='md'
-              mr='4'
-              isActive={filter === 'Assassin'}
-              onClick={() => setFilter('Assassin')}
-              bg='blue.800'
-              color='white'
-              _hover={{
-                backgroundColor: 'blue.700',
-              }}
-              _active={{
-                bg: 'blue.500',
-                color: 'white',
-              }}
-            >
+            <Button size='md' mr='4' isActive={filter === 'Assassin'} onClick={() => setFilter('Assassin')} variant='variantButton'>
               {'Assassin'}
             </Button>
             <Button size='md' mr='4' isActive={filter === 'Mage'} onClick={() => setFilter('Mage')} variant='variantButton'>
