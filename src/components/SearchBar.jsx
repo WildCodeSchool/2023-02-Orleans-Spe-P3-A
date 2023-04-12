@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Input, InputGroup, Container, InputRightElement, Image, Box, Text } from '@chakra-ui/react';
+import { Input, InputGroup, Container, InputRightElement, Image, Box, Text, Flex } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
 
@@ -54,7 +54,7 @@ function SearchBar() {
         <Box mt='20px' p='10px' bg='blue.800 ' borderRadius='md' w='100%' maxH='300px' overflowY='scroll' spacing='0px'>
           {filteredChampions.map(champion => (
             <Link to={`/champion/${champion.id}`}>
-              <Box key={champion.id} display='flex' alignItems='center' my='10px' gap='30px' ms='10px'>
+              <Flex key={champion.id} alignItems='center' my='10px' gap='30px' ms='10px'>
                 <Image
                   src={`//ddragon.leagueoflegends.com/cdn/13.7.1/img/champion/${champion.id}.png`}
                   objectFit='contain'
@@ -63,7 +63,7 @@ function SearchBar() {
                   align='center'
                 />
                 <Text color='white'>{champion.name}</Text>
-              </Box>
+              </Flex>
             </Link>
           ))}
         </Box>
