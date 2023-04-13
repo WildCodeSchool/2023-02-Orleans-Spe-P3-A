@@ -54,7 +54,7 @@ const Footer = () => {
         >
           {/*Box Authors title */}
           <Flex
-            justify={['center']}
+            justify={'center'}
             w='100%'
             color='grey'
             fontSize='2rem'
@@ -113,7 +113,7 @@ const Footer = () => {
 
             <Flex
               justify='space-between'
-              align={['flex-start']}
+              align={'flex-start'}
               direction={['column', 'column', 'row']}
               color='#D0A85C'
               w='90%'
