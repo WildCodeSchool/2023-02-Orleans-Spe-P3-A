@@ -3,19 +3,19 @@ import { Box, Flex, Text, Image, Wrap, Stack } from '@chakra-ui/react';
 const guys = [
   {
     name: 'Richard',
-    photo: './src/assets/images/richardexpertfooter.png',
+    photo: './src/assets/images/richard-expert-footer.png',
   },
   {
     name: 'Gregory',
-    photo: './src/assets/images/gregbygreegouze.png',
+    photo: './src/assets/images/greg-by-greegouze.png',
   },
   {
     name: 'Alexis',
-    photo: './src/assets/images/alexislechercheur.png',
+    photo: './src/assets/images/alexis-le-chercheur.png',
   },
   {
     name: 'Thyphen',
-    photo: './src/assets/images/thyphenvigile.png',
+    photo: './src/assets/images/thyphen-vigile.png',
   },
 ];
 
@@ -58,7 +58,7 @@ const Footer = () => {
             pl={{ base: '5', md: '24px' }}
             mt={{ base: '10px', md: 'initial' }}
           >
-            <Text>{'Authors'}</Text>
+            <Text>{'Auteurs'}</Text>
           </Flex>
 
           {/*authors name and photo*/}
