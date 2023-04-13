@@ -40,9 +40,6 @@ const Navbar = () => {
           <ChakraLink as={Link} to='/champions' mr='4' sx={{ ...hoverStyle, ...noDecorationStyle }}>
             {'Champions'}
           </ChakraLink>
-          <ChakraLink as={Link} to='/postes' sx={{ ...hoverStyle, ...noDecorationStyle }}>
-            {'Postes'}
-          </ChakraLink>
         </Box>
         <IconButton
           aria-label='Menu'
@@ -67,9 +64,6 @@ const Navbar = () => {
                 </ChakraLink>
                 <ChakraLink as={Link} to='/champions' mb='2'>
                   {'Champions'}
-                </ChakraLink>
-                <ChakraLink as={Link} to='/postes' mb='2'>
-                  {'Postes'}
                 </ChakraLink>
               </Flex>
             </DrawerBody>
