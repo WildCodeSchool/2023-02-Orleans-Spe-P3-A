@@ -1,19 +1,21 @@
-import { useState } from 'react';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import List from './pages/ListChampions';
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
+import ChampionDetails from './pages/ChampionDetails';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <main>
-      <h1>{'Hey les spé React !'}</h1>
-      <div className='card'>
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-    </main>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/champions' element={<List />} />
+        <Route path='/champion/:name' element={<ChampionDetails />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
