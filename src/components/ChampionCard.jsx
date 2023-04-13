@@ -37,7 +37,7 @@ function ChampionCard({ champion }) {
             </Badge>
           ))}
         </Flex>
-        <Box justifyContent='center' p='0'>
+        <Box justifyContent='center' p='2'>
           <Link to={`/champion/${champion.id}`}>
             <Button variant='solid' h='30%' w='100%' margin='auto'>
               {'Sélectionnez ce champion'}
