@@ -68,9 +68,6 @@ const Navbar = () => {
                 <ChakraLink as={Link} to='/champions' mb='2'>
                   {'Champions'}
                 </ChakraLink>
-                <ChakraLink as={Link} to='/postes' mb='2'>
-                  {'Postes'}
-                </ChakraLink>
               </Flex>
             </DrawerBody>
           </DrawerContent>
