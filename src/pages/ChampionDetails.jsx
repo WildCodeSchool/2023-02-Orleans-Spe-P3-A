@@ -82,6 +82,7 @@ function ChampionDetails() {
             _hover={{
               transform: 'scale(1.5)',
               transitionDuration: 'all 0.6s ease-in-out',
+              border: 'solid 1px #D0A85C',
             }}
           />
           {spells.map(spell => (
@@ -93,7 +94,7 @@ function ChampionDetails() {
               backgroundImage={`//ddragon.leagueoflegends.com/cdn/13.7.1/img/spell/${spell.image.full}`}
               h='50px'
               w='50px'
-              _hover={{ transform: 'scale(1.5)', transitionDuration: 'all 0.6s ease-in-out' }}
+              _hover={{ transform: 'scale(1.5)', transitionDuration: 'all 0.6s ease-in-out', border: 'solid 1px #D0A85C' }}
             />
           ))}
         </Flex>
