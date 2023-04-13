@@ -22,7 +22,7 @@ function ChampionCard({ champion }) {
       }}
     >
       <Center h='80%'>
-        <Image src={image} alt={name} objectFit='contain' h='100%' w='100%' />
+        <Image src={image} alt={name} objectFit='cover' h='100%' w='100%' />
       </Center>
 
       <Box p='2' justifyContent='center'>
@@ -37,7 +37,7 @@ function ChampionCard({ champion }) {
             </Badge>
           ))}
         </Flex>
-        <Box justifyContent='center' p='0'>
+        <Box justifyContent='center' p='2'>
           <Link to={`/champion/${champion.id}`}>
             <Button variant='solid' h='30%' w='100%' margin='auto'>
               {'Sélectionnez ce champion'}

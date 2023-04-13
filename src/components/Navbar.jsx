@@ -1,4 +1,4 @@
-import logo from '../assets/images/blizzard.png';
+import logo from '../assets/images/logo.png';
 import {
   Box,
   Flex,
@@ -31,7 +31,7 @@ const Navbar = () => {
     <Box bg='gray.800'>
       <Flex alignItems='center' justifyContent='space-between' py='3'>
         <Box fontWeight='bold' color='white' ml='4' sx={{ ...hoverStyle }}>
-          <img src={logo} alt='Logo' width='150px' />
+          <img src={logo} alt='Logo' width='110px' />
         </Box>
         <Box display={['none', 'block']} color='white' fontSize='20px' mr='4'>
           <ChakraLink as={Link} to='/' mr='4' sx={{ ...hoverStyle, ...noDecorationStyle }}>
