@@ -34,7 +34,7 @@ function ChampionDetails() {
   };
 
   const handlePassiveClick = () => {
-    setSelectedSpell(false);
+    setSelectedSpell(null);
     setSelectedPassive(true);
   };
 
