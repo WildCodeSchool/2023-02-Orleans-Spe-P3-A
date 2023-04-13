@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Box, Flex, Button, Text } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
 
+const filteredRegex = /<\/?[a-zA-Z]+\b[^<>]*>/g;
+
 function ChampionDetails() {
   const [champion, setChampion] = useState(null);
   const [selectedSpell, setSelectedSpell] = useState(null);
@@ -122,8 +124,8 @@ function ChampionDetails() {
             )}
           </Text>
           <Text textAlign='start' color='white' pr='10px'>
-            {selectedPassive && <Text fontSize='1rem'>{passive.description}</Text>}
-            {selectedSpell && <Text fontSize='1rem'>{selectedSpell.description}</Text>}
+            {selectedPassive && <Text fontSize='1rem'>{passive.description.replace(filteredRegex, '')}</Text>}
+            {selectedSpell && <Text fontSize='1rem'>{selectedSpell.description.replace(filteredRegex, '')}</Text>}
           </Text>
         </Flex>
       </Flex>
