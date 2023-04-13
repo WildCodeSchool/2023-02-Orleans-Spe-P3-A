@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import ChampionCard from '../components/ChampionCard';
-import { Box, Heading, Skeleton, Button, Select, InputGroup, InputRightElement, Input, Flex, Center } from '@chakra-ui/react';
+import { Box, Heading, Skeleton, Button, Select, InputGroup, InputRightElement, Input, Flex, Center, Icon } from '@chakra-ui/react';
 import background from '../assets/images/background-image.png';
 import { SearchIcon } from '@chakra-ui/icons';
+import { FaArrowUp } from 'react-icons/fa';
 
 const filterButtons = [
   { label: 'Tous les champions', value: '' },
@@ -20,6 +21,7 @@ function List() {
   const [isMobile, setIsMobile] = useState(false);
   const [showSearchBar, setShowSearchBar] = useState(true);
   const [searchValue, setSearchValue] = useState('');
+  const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -43,6 +45,29 @@ function List() {
 
     return function cleanup() {
       abortController.abort();
+    };
+  }, []);
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 300) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  };
+
+  const handleButtonClick = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -77,7 +102,7 @@ function List() {
           {isMobile ? (
             <Center display='flex' justifyContent='center' color='white' marginTop={10}>
               <Select
-                width='75%'
+                width='100%'
                 value={filter}
                 onChange={event => setFilter(event.target.value)}
                 bg='blue.800'
@@ -142,6 +167,13 @@ function List() {
             : filteredChampions.map(champion => <ChampionCard key={champion.id} champion={champion} />)}
         </Box>
       </Box>
+      {showButton && (
+        <Box position='fixed' bottom='4' right='4'>
+          <Button onClick={handleButtonClick} size='sm' colorScheme='blue'>
+            <Icon as={FaArrowUp} />
+          </Button>
+        </Box>
+      )}
     </Box>
   );
 }
