@@ -10,6 +10,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
   DrawerBody,
+  Image,
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { HamburgerIcon } from '@chakra-ui/icons';
@@ -31,7 +32,9 @@ const Navbar = () => {
     <Box bg='gray.800'>
       <Flex alignItems='center' justifyContent='space-between' py='3'>
         <Box fontWeight='bold' color='white' ml='4' sx={{ ...hoverStyle }}>
-          <img src={logo} alt='Logo' width='110px' />
+          <ChakraLink as={Link} to='/'>
+            <Image src={logo} alt='Logo' width='110px' />
+          </ChakraLink>
         </Box>
         <Box display={['none', 'block']} color='white' fontSize='20px' mr='4'>
           <ChakraLink as={Link} to='/' mr='4' sx={{ ...hoverStyle, ...noDecorationStyle }}>
