@@ -4,9 +4,7 @@ import imageSrc from '../../src/assets/images/background-image.png';
 import useTypewriter from 'react-typewriter-hook';
 
 function Home() {
-  const text1 = 'B2G.JS !!';
-
-  const typingText1 = useTypewriter(text1);
+  const typingText1 = useTypewriter('B2G.JS');
 
   return (
     <Box backgroundImage={imageSrc} backgroundSize='cover' backgroundPosition='center' minHeight='100vh' paddingTop='50px'>
