@@ -21,7 +21,9 @@ const Navbar = () => {
     <Box bg='gray.800'>
       <Flex alignItems='center' justifyContent='space-between' py='3'>
         <Box fontWeight='bold' color='white' ml='4'>
-          <img src={logo} alt='Logo' width='110px' />
+          <ChakraLink as={Link} to='/'>
+            <img src={logo} alt='Logo' width='110px' />
+          </ChakraLink>
         </Box>
         <Box display={['none', 'block']} color='white' fontSize='20px' mr='4'>
           <ChakraLink as={Link} to='/' mr='4'>
