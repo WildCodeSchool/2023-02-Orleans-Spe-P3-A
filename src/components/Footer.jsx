@@ -110,14 +110,6 @@ const Footer = () => {
               <Text fontSize='1.3rem' fontWeight='bold'>
                 {'Data Dragon'}
               </Text>
-              <Text
-                fontSize={{ base: '1rem', md: '1..1rem' }}
-                alignSelf={{ base: 'flex-start', md: 'flex-end' }}
-                marginBottom={{ base: '20px' }}
-                color='#D0A85C'
-              >
-                {'Mentions légales'}
-              </Text>
             </Flex>
           </Flex>
         </Box>
