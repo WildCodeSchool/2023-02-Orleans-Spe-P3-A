@@ -1,21 +1,25 @@
 import { Box, Flex, Text, Image, Wrap, Stack } from '@chakra-ui/react';
+import Greg from '../assets/images/greg-by-greegouze.png';
+import Richard from '../assets/images/richard-expert-footer.png';
+import Alexis from '../assets/images/alexis-le-chercheur.png';
+import Thyphen from '../assets/images/thyphen-vigile.png';
 
 const guys = [
   {
     name: 'Richard',
-    photo: './src/assets/images/richard-expert-footer.png',
+    photo: Richard,
   },
   {
     name: 'Gregory',
-    photo: './src/assets/images/greg-by-greegouze.png',
+    photo: Greg,
   },
   {
     name: 'Alexis',
-    photo: './src/assets/images/alexis-le-chercheur.png',
+    photo: Alexis,
   },
   {
     name: 'Thyphen',
-    photo: './src/assets/images/thyphen-vigile.png',
+    photo: Thyphen,
   },
 ];
 
@@ -50,7 +54,7 @@ const Footer = () => {
         >
           {/*Box Authors title */}
           <Flex
-            justify={['center', 'center', 'center']}
+            justify={['center']}
             w='100%'
             color='grey'
             fontSize='2rem'
