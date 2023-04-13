@@ -1,4 +1,4 @@
-import logo from '../assets/images/blizzard.png';
+import logo from '../assets/images/logo.png';
 import {
   Box,
   Flex,
