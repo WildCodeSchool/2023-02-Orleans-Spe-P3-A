@@ -10,6 +10,7 @@ const filterButtons = [
   { label: 'Assassins', value: 'Assassin' },
   { label: 'Mages', value: 'Mage' },
   { label: 'Tireurs', value: 'Marksman' },
+  { label: 'Supports', value: 'Support' },
 ];
 
 function List() {
