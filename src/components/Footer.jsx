@@ -37,7 +37,7 @@ const SeparationLine = () => {
 
 const Footer = () => {
   return (
-    <Box as='footer' bg='gray.900' w='100%' h={{ base: '520px', md: '180px' }} overflow='hidden'>
+    <Box as='footer' bg='gray.900' w='100%' h={{ base: '455px', md: '180px' }} overflow='hidden'>
       <Stack direction={['column', 'column', 'row', 'row']}>
         {/*Box authors-api */}
         <Flex
@@ -73,6 +73,7 @@ const Footer = () => {
                   gap='10px'
                   w={{ base: '77px', md: '116px' }}
                   minW='116px'
+                  mt='10px'
                 >
                   {/*authors photo*/}
                   <Image w='100%' borderRadius='full' boxSize='40px' src={guy.photo} alt={`photo de ${guy.name}`} />
